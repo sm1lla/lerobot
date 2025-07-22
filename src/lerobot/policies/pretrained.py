@@ -195,7 +195,7 @@ class PreTrainedPolicy(nn.Module, HubMixin, abc.ABC):
     ):
         api = HfApi()
         repo_id = api.create_repo(
-            repo_id=self.config.repo_id, private=self.config.private, exist_ok=True
+            repo_id=self.config.repo_id, private=True, exist_ok=True
         ).repo_id
 
         # Push the files to the repo in a single commit

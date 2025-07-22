@@ -132,7 +132,7 @@ class HubMixin:
         repo_id: str,
         *,
         commit_message: str | None = None,
-        private: bool | None = None,
+        private: bool | None = True,
         token: str | None = None,
         branch: str | None = None,
         create_pr: bool | None = None,
